@@ -2,10 +2,14 @@ package com.gcp.inventoryservice.domain
 
 class Inventory {
     String id
-    String count
+    boolean storePickUp
+    boolean shipToHome
+    List<OpenBox> openBoxList
 
-    Inventory(String id, String count) {
+    Inventory(String id, boolean storePickUp, boolean shipToHome, List<OpenBox> openBoxList) {
         this.id = id
-        this.count = count
+        this.storePickUp = storePickUp
+        this.shipToHome = shipToHome
+        this.openBoxList = openBoxList
     }
 }

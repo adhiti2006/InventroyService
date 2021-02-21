@@ -1,6 +1,5 @@
 package com.gcp.inventoryservice.controller
 
-import com.gcp.inventoryservice.domain.Inventory
 import spock.lang.Specification
 
 class InventoryControllerSpec  extends Specification{
@@ -9,9 +8,8 @@ class InventoryControllerSpec  extends Specification{
 
     void fetchProduct() {
         when:
-            Inventory inventory = inventoryController.fetchProduct('123')
+            boolean isSkuSellable = inventoryController.isSkuSellable('123')
         then:
-            assert inventory
-            assert inventory.id
+            assert isSkuSellable
     }
 }
