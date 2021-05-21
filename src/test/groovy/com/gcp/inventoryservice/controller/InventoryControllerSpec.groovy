@@ -1,7 +1,9 @@
 package com.gcp.inventoryservice.controller
 
+import org.junit.Ignore
 import spock.lang.Specification
 
+@Ignore
 class InventoryControllerSpec  extends Specification{
 
     InventoryController inventoryController = new InventoryController()
